@@ -1,0 +1,27 @@
+.footer{
+    height: 50px;
+    width: 100%;
+    background-color: $grey-color;
+    position: fixed;
+    z-index: 998;
+    bottom:0;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        a{
+            color: #ffffff;
+        }
+    }
+    &__side{
+        text-align: left;
+    }
+    &__contact{
+        text-align: right;
+        a{
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+@import 'base/variable';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+@import 'base/form-items';
+
+@import 'blocks/header';
+@import 'blocks/about';
+@import 'blocks/footer';
+@import 'blocks/skills';
