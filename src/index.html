@@ -20,7 +20,7 @@
             <div class="header__menu">
                 <ul>
                     <li>
-                        <a href="#about" class="btn" data-target="about">
+                        <a href="#about" class="btn hover" data-target="about">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                             </svg>
@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#skills" class="btn hover" data-target="skills">
+                        <a href="#skills" class="btn" data-target="skills">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"/>
                                 <path fill-rule="evenodd" d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z"/>
@@ -70,7 +70,7 @@
     </header>
     
     <!-- ABOUT -->
-    <section class="about" id="about">
+    <section class="about active" id="about">
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__photo">
@@ -96,14 +96,69 @@
     </section>
 
     <!-- SKILLS -->
-    <section class="skills active" id="skills">
+    <section class="skills" id="skills">
         <div class="container">
-            <ul class="skills_lists">
-                <li>PHP</li>
-                <li>HTML5</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>SQL</li>
+            <ul class="skills__lists">
+                <li>
+                    <div class="skills__lists-img">PHP</div>
+                    <div class="skills__lists-wrapper">
+                        <div class="skills__lists-text">
+                            PHP
+                            <span>78%</span>
+                        </div>
+                        <div class="skills__lists-progres">
+                            <div class="progres-bar" data-progres="78" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills__lists-img">HTML5</div>
+                    <div class="skills__lists-wrapper">
+                        <div class="skills__lists-text">
+                            HTML5
+                            <span>60%</span>
+                        </div>
+                        <div class="skills__lists-progres">
+                            <div class="progres-bar" data-progres="60" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills__lists-img">CSS</div>
+                    <div class="skills__lists-wrapper">
+                        <div class="skills__lists-text">
+                            CSS
+                            <span>18%</span>
+                        </div>
+                        <div class="skills__lists-progres">
+                            <div class="progres-bar" data-progres="18" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills__lists-img">JS</div>
+                    <div class="skills__lists-wrapper">
+                        <div class="skills__lists-text">
+                            JS
+                            <span>58%</span>
+                        </div>
+                        <div class="skills__lists-progres">
+                            <div class="progres-bar" data-progres="58" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills__lists-img">SQL</div>
+                    <div class="skills__lists-wrapper">
+                        <div class="skills__lists-text">
+                            SQL
+                            <span>98%</span>
+                        </div>
+                        <div class="skills__lists-progres">
+                            <div class="progres-bar" data-progres="98" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>

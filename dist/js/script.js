@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
             let id_section = target.getAttribute("data-target");
             console.log(id_section);
             active_section(id_section);
-
+            if(id_section == "skills"){
+                showProgressBars();
+            }
         }
     });
 
@@ -63,9 +65,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if(sections != null){
             sections.forEach(function(item){
                if(!item.classList.contains("active")){
-                   item.style.display = "none";
+                    item.style.display = "none";
                }else{
-                item.style.display = "block";
+                    item.style.display = "block";
+                    /**
+                     * Если блок скилов стал активным запустить анимацию
+                     */
+                    // if(item.getAttribute('id') == "skills"){
+                    //     showProgressBars();
+                    // }
                }
             });
         }
@@ -108,8 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
     /**
      * Срабатывание скрипта при прокрутки для нужного места на странице
      */
-    window.addEventListener('scroll', showProgressBars);
-
+    //window.addEventListener('scroll', showProgressBars);
+    
     function showProgressBars() {
         /**
          * Прогресс бары
@@ -126,9 +134,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     /**
                      * Проверка попал ли в зону видимости
                      */
-                    if(isVisible(progres)){
-                        progres.style.width = progres.getAttribute('data-progres')+"%";
-                    }
+                    // if(isVisible(progres)){
+                        
+                    // }
+                    progres.style.width = progres.getAttribute('data-progres')+"%";
                 }
             }
         }
