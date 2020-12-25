@@ -1,0 +1,20 @@
+.modal{
+    position: absolute;
+    z-index: 10000;
+    width: 300px;
+    min-height: 100px;
+    border-radius: 10px;
+    border:1px solid #DFDFDF;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $grey-color;
+    padding: 5px 5px;
+    &__header{
+        text-align: right;
+        padding: 5px 10px;
+    }
+    &__body{
+        padding: 5px 15px;
+    }
+}

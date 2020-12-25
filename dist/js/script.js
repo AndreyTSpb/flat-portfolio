@@ -142,4 +142,48 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+
+    /**
+     * Открытие модалок для скилов
+     */
+    let btn_skills = document.querySelectorAll('.skills__lists-wrapper');
+    if(btn_skills != null){
+        btn_skills.forEach((btn)=>{
+            btn.addEventListener('click', (e)=>{
+                let id_modal = btn.getAttribute('data-target');
+                open_modal(id_modal);
+            });
+        });
+    }
+
+    /**
+     * открытие модалки по айди
+     * @param {*} id_modal 
+     */
+    function open_modal(id_modal){
+        let modal = document.querySelector('#'+id_modal);
+        if(modal != null){
+            modal.style.display = "block";
+        }
+    }
+    /**
+     * Реакция на нажатия кнопки закрытия модалки
+     */
+    function close_modal(){
+        let modals = document.querySelectorAll('.modal');
+        if(modals != null){
+            modals.forEach((modal)=>{
+                modal.addEventListener("click", (event)=>{
+                    let target = event.target;
+                    if(target.classList.contains('close')){
+                        modal.style.display = 'none';
+                    }
+                    if(target.parentNode.classList.contains('close')){
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+        }
+    }
+    close_modal();
 });

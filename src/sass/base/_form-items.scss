@@ -30,3 +30,15 @@
 .btn.no-border.hover{
         color: $green-color;
 }
+
+.close{
+    svg{
+        fill: #DFDFDF;
+    }
+    &:hover{
+        cursor: pointer;
+        svg{
+            fill: $yellow-color;
+        }
+    }
+}
