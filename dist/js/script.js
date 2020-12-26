@@ -175,10 +175,14 @@ document.addEventListener('DOMContentLoaded', function() {
             modals.forEach((modal)=>{
                 modal.addEventListener("click", (event)=>{
                     let target = event.target;
+                    console.log(target);
                     if(target.classList.contains('close')){
                         modal.style.display = 'none';
                     }
                     if(target.parentNode.classList.contains('close')){
+                        modal.style.display = 'none';
+                    }
+                    if(target.parentNode.parentNode.classList.contains('close')){
                         modal.style.display = 'none';
                     }
                 });

@@ -33,6 +33,9 @@
         &-wrapper{
             width: 100%;
             margin-left: 20px;
+            &:hover{
+                cursor: pointer;
+            }
         }
         &-progres{
             position: relative;

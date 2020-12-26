@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="btn" href = "#works" data-target="works">
+                        <a class="btn" href = "#my-works" data-target="my-works">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 1H1v3h5V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12h-5v3h5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8H1v7h5V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6h-5v7h5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
                             </svg>
@@ -117,7 +117,7 @@
                     <div class="skills__lists-img">
                         <img src="icons/html.png" alt="" srcset="">
                     </div>
-                    <div class="skills__lists-wrapper">
+                    <div class="skills__lists-wrapper" data-target="html-skill">
                         <div class="skills__lists-text">
                             HTML5
                             <span>60%</span>
@@ -131,7 +131,7 @@
                     <div class="skills__lists-img">
                         <img src="icons/css.png" alt="" srcset="">
                     </div>
-                    <div class="skills__lists-wrapper">
+                    <div class="skills__lists-wrapper" data-target="css-skill">
                         <div class="skills__lists-text">
                             CSS
                             <span>18%</span>
@@ -145,7 +145,7 @@
                     <div class="skills__lists-img">
                         <img src="icons/js.png" alt="" srcset="">
                     </div>
-                    <div class="skills__lists-wrapper">
+                    <div class="skills__lists-wrapper" data-target="js-skill">
                         <div class="skills__lists-text">
                             JS
                             <span>58%</span>
@@ -159,7 +159,7 @@
                     <div class="skills__lists-img">
                         <img src="icons/mysql.png" alt="" srcset="">
                     </div>
-                    <div class="skills__lists-wrapper">
+                    <div class="skills__lists-wrapper" data-target="sql-skill">
                         <div class="skills__lists-text">
                             SQL
                             <span>98%</span>
@@ -170,6 +170,40 @@
                     </div>
                 </li>
             </ul>
+        </div>
+    </section>
+
+    <section class="my-works" id="my-works">
+        <div class="container">
+            <div class="my-works__grid">
+                <div class="my-works__grid-item">
+                    <a href=""><img src="img/item-work.png" alt=""></a>
+                </div>
+                <div class="my-works__grid-item">
+                    <a href=""><img src="img/item-work.png" alt=""></a>
+                </div>
+                <div class="my-works__grid-item">
+                    <a href=""><img src="img/item-work.png" alt=""></a>
+                </div>
+                <div class="my-works__grid-item">
+                    <a href=""><img src="img/item-work.png" alt=""></a>
+                </div>
+                <div class="my-works__grid-item">
+                    <a href=""><img src="img/item-work.png" alt=""></a>
+                </div>
+                <div class="my-works__grid-item">
+                    <a href=""><img src="img/item-work.png" alt=""></a>
+                </div>
+                <div class="my-works__grid-item">
+                    <a href=""><img src="img/item-work.png" alt=""></a>
+                </div>
+                <div class="my-works__grid-item">
+                    <a href=""><img src="img/item-work.png" alt=""></a>
+                </div>
+                <div class="my-works__grid-item">
+                    <a href=""><img src="img/item-work.png" alt=""></a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -188,11 +222,68 @@
             </div>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
 
     <!-- MODALS -->
     <!-- Modals for skills -->
     <div class="modal" id="php-skill">
+        <div class="modal__header">
+            <span class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </span>
+        </div>
+        <div class="modal__body">
+            <p>text lkz vjlfkrb</p>
+        </div>
+    </div>
+
+    <div class="modal" id="html-skill">
+        <div class="modal__header">
+            <span class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </span>
+        </div>
+        <div class="modal__body">
+            <p>text lkz vjlfkrb</p>
+        </div>
+    </div>
+
+    <div class="modal" id="css-skill">
+        <div class="modal__header">
+            <span class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </span>
+        </div>
+        <div class="modal__body">
+            <p>text lkz vjlfkrb</p>
+        </div>
+    </div>
+
+    <div class="modal" id="js-skill">
+        <div class="modal__header">
+            <span class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </span>
+        </div>
+        <div class="modal__body">
+            <p>text lkz vjlfkrb</p>
+        </div>
+    </div>
+
+    <div class="modal" id="sql-skill">
         <div class="modal__header">
             <span class="close">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">

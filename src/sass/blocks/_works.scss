@@ -1,0 +1,20 @@
+.my-works{
+    background-color: $bg-color;
+    min-height: 100vh;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 35px;
+        grid-row-gap: 35px;
+        justify-content: space-around;
+        margin-top: 15px;
+        &-item{
+            text-align: center;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+}
