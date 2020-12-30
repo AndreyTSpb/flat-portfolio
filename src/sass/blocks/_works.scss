@@ -41,6 +41,14 @@
                     }    
                 }
             }
+            &-tegs{
+                position: absolute;
+                bottom: 0;
+                color: $bg-color;
+                padding-left: 25px;
+                padding-bottom: 10px;
+                text-transform: uppercase;
+            }
         }
     }
 }
