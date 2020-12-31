@@ -6,16 +6,24 @@
     border-radius: 10px;
     border:1px solid #DFDFDF;
     top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: calc(50% - 150px);
+    transform: translateY(-50%);
     background-color: $grey-color;
     padding: 5px 5px;
     display: none;
     &__header{
-        text-align: right;
         padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4{
+            margin: 0;
+        }
     }
     &__body{
         padding: 5px 15px;
+        p{
+            padding-top: 10px;
+        }
     }
 }

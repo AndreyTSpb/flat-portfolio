@@ -28,7 +28,10 @@
     border: none;
 }
 .btn.no-border.hover{
-        color: $green-color;
+    color: $green-color;
+    svg{
+        fill: $green-color;
+    }
 }
 
 .close{

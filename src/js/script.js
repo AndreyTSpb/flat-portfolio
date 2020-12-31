@@ -17,9 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let id_section = target.getAttribute("data-target");
             console.log(id_section);
             active_section(id_section);
-            if(id_section == "skills"){
-                showProgressBars();
-            }
         }
     });
 
@@ -106,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 modal.style.display = 'none';
             });
     }
+    
     /**
      * убрать у всех класс активной кнопки
      */
@@ -117,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } 
     }
+
     /**
      * убираем у всех секций активный класс  
      */
@@ -128,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
     /**
      * Найти все блоки с тегом SECTION и если нет класса ACTIVE скрыть
      */
@@ -149,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
     /**
      * Включаем видмость выбранному блоку
      */
@@ -161,8 +162,21 @@ document.addEventListener('DOMContentLoaded', function() {
             section.classList.add("active");
             //отобразить секцию
             hide_sections();
+            /**
+             * Если блок со скилами то надо их анимировать
+             */
+            if(id_section == "skills"){
+                showProgressBars();
+            }else{
+                hideProgressBars();
+            }
         }
     }
+
+    /**
+     * ПРАГРЕСС БАРЫ
+     */
+    
     /**
      * Функция проверки находится ли элемент в зоне видомости
      */
@@ -180,10 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
         return topVisible || bottomVisible;
     }
-
-    /**
-     * ПРАГРЕСС БАРЫ
-     */
+    
     /**
      * Срабатывание скрипта при прокрутки для нужного места на странице
      */
@@ -205,17 +216,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     /**
                      * Проверка попал ли в зону видимости
                      */
-                    // if(isVisible(progres)){
-                        
-                    // }
-                    progres.style.width = progres.getAttribute('data-progres')+"%";
+                    if(isVisible(progres)){
+                        progres.style.width = progres.getAttribute('data-progres')+"%";   
+                    }
                 }
             }
         }
     }
 
     /**
-     * Открытие модалок для скилов
+     * прогресс-барам задаем пустое значение 
+     */
+    function hideProgressBars(){
+        let progress_bars = document.querySelectorAll(".progres-bar");
+        if(progress_bars.length > 0){
+            for(let i = 0; i< progress_bars.length; i++){
+                let progres = progress_bars[i];
+                progres.style.width = 0;
+            }
+        }
+    }
+
+    /**
+     * Открытие модалок при нажатии на скилы
      */
     let btn_skills = document.querySelectorAll('.skills__lists-wrapper');
     if(btn_skills != null){
@@ -228,15 +251,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
-     * открытие модалки по айди
-     * @param {*} id_modal 
+     * открытие модалки по айди 
      */
     function open_modal(id_modal){
+        /**
+         * Скроем все модалки если открыты
+         */
+        hide_modals();
+
+        /**
+         * ищем нужную модалку
+         * и если находим, то делаем видемой
+         */
         let modal = document.querySelector('#'+id_modal);
         if(modal != null){
             modal.style.display = "block";
         }
     }
+
     /**
      * Реакция на нажатия кнопки закрытия модалки
      */
