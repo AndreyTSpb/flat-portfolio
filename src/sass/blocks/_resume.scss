@@ -1,0 +1,40 @@
+.resume{
+    min-height: calc(100vh - 50px);
+    background-color: $bg-color;
+    text-align: left;
+    &__block{
+        width: calc(100% - 220px);
+        margin-top: 70px;
+        padding-left: 28px;
+        padding-right: 50px;
+        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-around;
+        &-img{
+            position: relative;
+            img{
+                width: 300px;
+                height: 300px;
+                border-radius: 100%;
+                position: absolute;
+                top: 50%;
+                left: calc(50%-150px);
+                transform: translateY(-50%);
+            }
+        }
+    }
+    h1{
+        font-size: 24px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.04;
+        letter-spacing: normal;
+        text-align: left;
+        color: $green-color;
+        text-transform: uppercase;
+    }
+
+
+}
