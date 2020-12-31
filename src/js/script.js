@@ -24,17 +24,88 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     /**
-     * нажатие кнопки Контакты
+     * Нажатие кнопки напишите мне
+     */
+    let btn_contact_us = document.querySelector('#contacts-us');
+    if(btn_contact_us != null){
+        btn_contact_us.addEventListener('click', ()=>{
+            /**
+             * Скрыть все модалки
+             */
+            hide_modals();
+            /**
+             * Открыть форму для обратной связи
+             */
+            opect_contact_form();
+        });
+    }
+    /**
+     * Нажатие кнопки Контакты
      */
     let btn_contact = document.querySelector("#btn-contact");
-    console.log(btn_contact);
     if(btn_contact != null){
         btn_contact.addEventListener("click",()=>{
             hover_out();
             btn_contact.classList.add('hover');
+            /**
+             * Скрыть все модалки
+             */
+            hide_modals();
+            /**
+             * Открыть форму для обратной связи
+             */
+            opect_contact_form();
         });
     }
 
+    /**
+     * Открыть форму для обратной связи
+     */
+    function opect_contact_form(){
+        let contacts = document.querySelector('#contacts');
+        if(contacts !== null) {
+            contacts.style.display = 'block';
+            close_contacts_form(contacts);
+        }
+    }
+            
+    /**
+     * Закрытие формы контакты
+     */
+    function close_contacts_form(form){
+        if(form !== null) {
+            /**
+             * Ищим кнопку закрыть
+             */
+            let close = form.querySelector('.close');
+            if(close != null){
+                close.addEventListener('click', ()=>{
+                    /**
+                     * закрываем форму
+                     */
+                    form.style.display ="none";
+                    
+                    /**
+                     * отключаем зеленый цвет у кнопки контакты
+                     */
+                    let btn_contact = document.querySelector('#btn-contact');
+                    if(btn_contact != null){
+                        btn_contact.classList.remove('hover');
+                    }
+                });
+            }
+        }
+    }
+
+    /**
+     * Скрыть все модалки
+     */
+    function hide_modals(){
+        let modals = document.querySelectorAll('.modal');
+            modals.forEach((modal)=>{
+                modal.style.display = 'none';
+            });
+    }
     /**
      * убрать у всех класс активной кнопки
      */

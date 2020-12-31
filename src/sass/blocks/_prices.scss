@@ -7,13 +7,17 @@
         grid-column-gap: 35px;
         grid-row-gap: 35px;
         justify-content: space-around;
-        margin-top: 15px;
+        align-items: center;
+        margin-top: 25px;
         &-item{
             width: 100%;
-            height: 75vh;
+            min-height: 75vh;
             background-color: $grey-color;
             padding: 20px 30px;
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
             img{
                 display: block;
                 margin: 0 auto;
@@ -21,17 +25,18 @@
                 border-radius: 10px;
             }
             &-header{
-                margin-top: 10px;
+                margin-top: 15px;
                 &-title{
                     color: $green-color;
-                    font-size: 18px;
+                    font-size: 20px;
                 }
                 &-price{
                     margin-top: 5px;
-                    font-size: 14px;
+                    font-size: 15px;
                 }
             }
             &-text{
+                margin-top: 10px;
                 text-indent: 20px;
                 font-style: 16px;
             }

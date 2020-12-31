@@ -1,11 +1,22 @@
 .form-contacts{
-    position: absolute;
+    position: fixed;
     background-color: #ffffff;
     width: 300px;
     bottom: 0;
     right: 0;
-    padding: 40px 20px;
+    padding: 40px 20px 60px;
     text-align: right;
+    .close{
+        position: absolute;
+        left: 10px;
+        top: 7px;
+        svg{
+            fill: $bg-color;
+            &:hover{
+                fill: $grey-color;
+            }
+        }
+    }
 
     input{
         width: 100%;
